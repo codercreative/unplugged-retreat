@@ -134,6 +134,7 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  list-style: none;
 }
 
 footer {
@@ -268,7 +269,7 @@ aside {
 }
 
 .faq .content-wrapper {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
@@ -371,15 +372,124 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+@media only screen and (min-width: 768px) {
+/*Tablet styles here*/
+  
+/*  General styles*/
+  .content-wrapper {
+    max-width: 640px; /*why max-width?*/
+    margin: 100px 0;
+  }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+/* Header */
+  header {
+    justify-content: space-around;
+    padding: 33px 0;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header nav {
+    width: 20%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /* Aside */
+
+  aside .content-wrapper {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 40%;
+    margin: 0;
+  }
+
+  /* Features */
+
+  .features article {
+  }
+
+  .features .features-item-description {
+    width: 100;
+  }
+
+   /* Reviews */
+
+   .reviews-article {
+
+   }
+
+   .reviews-article div {
+    width:;
+   }
+
+    /* Footer */
+
+    footer .content-wrapper {
+      width: 50%;
+      margin: 100px 0;
+    }
+
+    .footer-content {
+      width: 50%;
+    }
+
+    footer .contact {
+      margin-bottom: 0;
+    }
+
+    footer .copyright {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+
+
+/*==========================================================================
+   FAQ Page
+   ========================================================================== */
+
+  .faq .content-wrapper {
+    display: inline-flex; /*SUPER IMPORTANT IN ORDER TO GET TWO COLUMNS*/
+    justify-content: space-between;
+  }
+
+  .faq-content {
+    flex-basis: 40%;
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
+
+}
+ 
+@media only screen and (min-width: 1200px) {
+/*Desktop styles here*/
+
+/*  General styles*/
 }
 
 /* ==========================================================================
