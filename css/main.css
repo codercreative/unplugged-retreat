@@ -96,6 +96,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  color: #E2E3ED;
   text-align: left;
 }
 
@@ -144,11 +145,11 @@ address {
 
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
- /* background-color: #202322;*/
 }
 
 .content-wrapper {
@@ -175,6 +176,7 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  text-transform: uppercase;
   width: 60%;
 }
 
@@ -191,11 +193,13 @@ header nav ul li {
 }
 
 footer {
+  text-align: center;
   flex-direction: column;
 }
 
 footer p {
   margin: 0;
+  font-size: .875rem;
 }
 
 footer .content-wrapper {
@@ -242,6 +246,29 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+}
+
+input[type=text] {
+  box-sizing: border-box; /*research...*/
+  width: 100%;
+  color: #2A423A;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2A423A;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #E2E3ED;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Features */
@@ -275,6 +302,7 @@ aside {
 /* Reviews */
 
 .reviews {
+  background-color: #2A423A;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
