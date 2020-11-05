@@ -87,7 +87,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*General Styles*/
+/*General Global Styles*/
 
 html {
   font-size: 16px;
@@ -126,11 +126,13 @@ p {
 }
 
 img {
-  width: 100%;
+  padding: 15px 0 0 0;
+  width: 100%; /*responsify logos and other images
+}*/
 }
 
 figure {
-  margin: 0;
+  margin: 0; /*responsify logos and other images*/
 }
 
 address {
@@ -165,6 +167,14 @@ header .content-wrapper {
   margin: 0;
 }
 
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center:
+  flex-flow: row wrap;
+}
+
 .header-divider {
   width: 100%;
   height: 1px;
@@ -173,23 +183,26 @@ header .content-wrapper {
 
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
   text-transform: uppercase;
   width: 60%;
+  font-size: 1.125rem;
+  font-weight: 700;
+
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   width: 100%;
   list-style: none;
+  padding: 0;
 }
 
 header nav ul li {
-  font-size: 1.125em;
+  font-size: 1em;
 }
 
 footer {
@@ -234,9 +247,27 @@ footer .copyright {
 /* Hero Area */
 
 .hero-area {
+  background: url(../img/unplugged-retreat-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.hero-area .content-wrapper {
+  height: 500px;
+  margin: 50px 0;
+}
+
+.hero-area h1 {
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  color: #E2E3ED;
+  margin: 0;
 }
 
 /* Aside */
@@ -274,6 +305,10 @@ input[type=button] {
 /* Features */
 
 .features {
+  background: url(../img/unplugged-retreat-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -488,6 +523,15 @@ input[type=button] {
     justify-content: space-between;
   }
 
+  header nav ul a {
+    font-size: 1rem
+  }
+
+  img {
+  width: 80%; /*responsify logos and other images
+}*/
+}
+
   .header-divider {
     display: none;
   }
@@ -616,11 +660,32 @@ input[type=button] {
     max-width: 960px;
   }
 
+ /* Header */
+
+  header {
+    padding: 33px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
+  img {
+  width: 75%; /*responsify logos and other images
+}*/
+}
 
   /* Hero */
 
+  .hero-area .content-wrapper {
+    height: 1200px;
+    padding: 40px 0 0 0;
+  }
+
   .hero-area h1 {
-    width: 60%;
+    width: 90%;
+    font-size: 4.75em;
+    padding: 0 10px 0 0;
   }
 
   /*Aside */ 
@@ -636,6 +701,11 @@ input[type=button] {
  /*Features*/
   .features h2 {
     width: 90%;
+    text-align: center;
+  }
+
+  .features .features-item-description {
+    width: 65%;
   }
 
   .features article {
