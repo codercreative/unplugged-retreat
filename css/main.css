@@ -103,6 +103,8 @@ body {
 ul,
 ol {
   list-style-type: none;
+  /*margin: 0;
+  padding: 0;*/
 }
 
 a {
@@ -110,14 +112,9 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
-}
-
-h3, 
-h4 {
-  font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -126,7 +123,7 @@ p {
 }
 
 img {
-  padding: 15px 0 0 0;
+  /*padding: 15px 0 0 0;*/
   width: 100%; /*responsify logos and other images
 }*/
 }
@@ -154,17 +151,22 @@ footer {
   flex-flow: row wrap;
 }
 
-.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
+header {
+  padding: 15px 0;
 }
 
+/*.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}*/
+
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
+  
 }
 
 header figure {
@@ -172,7 +174,6 @@ header figure {
   display: flex;
   justify-content: center;
   align-items: center:
-  flex-flow: row wrap;
 }
 
 .header-divider {
@@ -190,12 +191,11 @@ header nav {
   width: 60%;
   font-size: 1.125rem;
   font-weight: 700;
-
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   list-style: none;
   padding: 0;
@@ -249,39 +249,47 @@ footer .copyright {
 .hero-area {
   background: url(../img/unplugged-retreat-hero.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-position: center;
   min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-}
-
-.hero-area .content-wrapper {
-  height: 500px;
-  margin: 50px 0;
-}
-
-.hero-area h1 {
-  font-size: 2em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: normal;
-  color: #E2E3ED;
   margin: 0;
+}
+
+.hero-area .content-wrapper h1 {
+  font-size: 2.3em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  min-height: 100px;
 }
 
 /* Aside */
 
-aside {
+aside  {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
+
+aside .content-wrapper .form {
+  width: 100%;
+ }
+
+ aside .form {
+  margin: 0;
+ }
+
 
 input[type=text] {
   box-sizing: border-box; /*research...*/
+  height: 45px;
   width: 100%;
   color: #2A423A;
   font-style: italic;
@@ -295,7 +303,7 @@ input[type=button] {
   background-color: #2A423A;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 1em;
   color: #E2E3ED;
   border: none;
   text-align: center;
@@ -348,7 +356,7 @@ input[type=button] {
 }
 
 .reviews h3 {
-  width: 55%;
+  width: 90%;
   margin: 20px 0;
 }
 
@@ -362,7 +370,48 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
+
+.content-wrapper h2 {
+  margin: 0;
+}
+
+.content-wrapper p {
+  margin-bottom: 0;
+}
+
+.map-container {
+  position: relative; /*this in order to set iframe to absolute*/
+  padding-bottom: 75%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+  height: 0; /*because the padding-bottom provides the height needed*/
+  overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+  border: none;
+}
+
+.map-container iframe {
+  position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+  top: 0; /*flush with top*/
+  left: 0; /*flush with left*/
+  width: 100%; /*want the map to fill in within the parent div*/
+  height: 100%; /*want the map to fill in within the parent div*/
+}
+
+/*.map figure {
+  width: 100%;
+  height: 0;
+  padding-bottom: 125%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
 
 .contact-section {
   display: flex;
@@ -384,6 +433,7 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+   background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -538,6 +588,12 @@ input[type=button] {
 
   /* Hero Area */
 
+
+.hero-area .content-wrapper h1 {
+  font-size: 4em;
+}
+
+
  /* Aside */
 
   aside .content-wrapper {
@@ -637,11 +693,11 @@ input[type=button] {
   }
 
   .faq-content {
-    flex-basis: 40%; /*Adding flex-basis*/
+    flex-basis: 45%;
   }
 
   .faq h2 {
-    width: 100%;
+   width: 100%;
   }
 
  .contact-section .content-wrapper {
@@ -652,7 +708,7 @@ input[type=button] {
 }
 
 /**************** DESKTOP STYLES *************************
-********************************************************/
+*******************************************************
 
 @media only screen and (min-width: 1200px) {  
 
@@ -667,11 +723,11 @@ input[type=button] {
   }
 
   nav ul li a {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   img {
-  width: 75%; /*responsify logos and other images
+/*  width: 75%; responsify logos and other images
 }*/
 }
 
@@ -684,8 +740,8 @@ input[type=button] {
 
   .hero-area h1 {
     width: 90%;
-    font-size: 4.75em;
-    padding: 0 10px 0 0;
+    font-size: 4.5em;
+    /*padding: 0 10px 0 0;*/
   }
 
   /*Aside */ 
@@ -715,6 +771,10 @@ input[type=button] {
   /*Reviews*/
   .reviews article div {
     width: 42%;
+  }
+
+  .reviews h2 {
+    padding: 0 0 20px 0;
   }
 
 /* ==========================================================================
