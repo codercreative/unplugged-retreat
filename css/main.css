@@ -366,52 +366,30 @@ input[type=button] {
    ========================================================================== */
 
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
 
-.content-wrapper h2 {
-  margin: 0;
-}
-
-.content-wrapper p {
-  margin-bottom: 0;
-}
-
-.map-container {
+.map figure {
+  width: 100%;
+  height: 0;
   position: relative; /*this in order to set iframe to absolute*/
-  padding-bottom: 75%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+  padding-bottom: 125%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
   height: 0; /*because the padding-bottom provides the height needed*/
   overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
   border: none;
 }
 
-.map-container iframe {
+.map iframe {
   position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
   top: 0; /*flush with top*/
   left: 0; /*flush with left*/
   width: 100%; /*want the map to fill in within the parent div*/
   height: 100%; /*want the map to fill in within the parent div*/
 }
-
-/*.map figure {
-  width: 100%;
-  height: 0;
-  padding-bottom: 125%;
-  overflow: hidden;
-  position: relative;
-}
-
-.map iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}*/
 
 .contact-section {
   display: flex;
