@@ -355,6 +355,12 @@ input[type=button] {
   margin: 20px 0;
 }
 
+footer .social i {
+  font-size: 2em;
+  padding-right: 15px; /*how to align better with display flex?*/
+}
+
+
 
 /* ==========================================================================
    About Page
