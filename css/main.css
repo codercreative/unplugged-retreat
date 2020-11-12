@@ -155,18 +155,12 @@ header {
   padding: 15px 0;
 }
 
-/*.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
-}*/
-
 header .content-wrapper {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  
 }
 
 header figure {
@@ -259,7 +253,7 @@ footer .copyright {
 }
 
 .hero-area .content-wrapper h1 {
-  font-size: 2.3em;
+  font-size: 2.25em;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
@@ -278,14 +272,9 @@ aside  {
   flex-flow: row wrap;
 }
 
-aside .content-wrapper .form {
-  width: 100%;
+ aside .content-wrapper .form-description {
+  margin-top: 20px;
  }
-
- aside .form {
-  margin: 0;
- }
-
 
 input[type=text] {
   box-sizing: border-box; /*research...*/
@@ -339,7 +328,13 @@ input[type=button] {
 }
 
 .features p {
+  text-align: center; /*important!*/
   margin: 0;
+}
+
+.features i {
+  font-size: 2em;
+  margin-bottom: 40px;
 }
 
 /* Reviews */
@@ -411,7 +406,7 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-   background-color: #527158;
+  background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -529,7 +524,7 @@ input[type=button] {
 
   .content-wrapper {
     max-width: 640px; /*why max-width?*/
-    margin: 100px 0;
+    padding: 40px 0;
   }
 
 /* Tablet Home Page - Header */
@@ -544,7 +539,7 @@ input[type=button] {
   }
 
   header nav {
-    width: 20%;
+    width: 15%;
   }
 
   header nav ul {
@@ -552,7 +547,7 @@ input[type=button] {
   }
 
   header nav ul a {
-    font-size: 1rem
+    font-size: 1em
   }
 
   img {
@@ -565,7 +560,6 @@ input[type=button] {
   }
 
   /* Hero Area */
-
 
 .hero-area .content-wrapper h1 {
   font-size: 4em;
@@ -604,7 +598,7 @@ input[type=button] {
    /* Tablet Home Page - Reviews */
 
    .reviews .content-wrapper { 
-    margin: 40px 0 50px 0;
+    margin: 30px;
    }
 
    .reviews article {
@@ -666,6 +660,7 @@ input[type=button] {
    FAQ Page
    ========================================================================== */
 
+
   .faq .content-wrapper {
     justify-content: space-between;
   }
@@ -712,13 +707,14 @@ input[type=button] {
   /* Hero */
 
   .hero-area .content-wrapper {
-    height: 1200px;
-    padding: 40px 0 0 0;
+    height: 600px;
+    /*padding: 40px 0 0 0;*/
   }
 
   .hero-area h1 {
     width: 90%;
     font-size: 4.5em;
+    margin-bottom: 40px;
     /*padding: 0 10px 0 0;*/
   }
 
@@ -735,7 +731,7 @@ input[type=button] {
  /*Features*/
   .features h2 {
     width: 90%;
-    text-align: center;
+    text-align: left;
   }
 
   .features .features-item-description {
