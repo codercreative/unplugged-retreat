@@ -731,7 +731,8 @@ footer .social i {
 
  aside .content-wrapper .form-description,
  aside .content-wrapper .form {
-  width: 30%;
+  /*width: 30%;*/
+  width: 100%;
  }
 
  /*Features*/
@@ -750,7 +751,8 @@ footer .social i {
 
   /*Reviews*/
   .reviews article div {
-    width: 42%;
+    /*width: 42%;*/
+    width: 90%;
   }
 
   .reviews h2 {
