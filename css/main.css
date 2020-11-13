@@ -123,7 +123,6 @@ p {
 }
 
 img {
-  /*padding: 15px 0 0 0;*/
   width: 100%; /*responsify logos and other images
 }*/
 }
@@ -167,7 +166,7 @@ header figure {
   width: 60%;
   display: flex;
   justify-content: center;
-  align-items: center:
+  align-items: center;
 }
 
 .header-divider {
@@ -183,7 +182,7 @@ header nav {
   flex-flow: row wrap;
   text-transform: uppercase;
   width: 60%;
-  font-size: 1.125rem;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -530,7 +529,7 @@ footer .social i {
 
   .content-wrapper {
     max-width: 640px; /*why max-width?*/
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
 /* Tablet Home Page - Header */
@@ -545,7 +544,7 @@ footer .social i {
   }
 
   header nav {
-    width: 15%;
+    width: 18%;
   }
 
   header nav ul {
@@ -553,24 +552,40 @@ footer .social i {
   }
 
   header nav ul a {
-    font-size: 1em
+    font-size: 1em;
   }
 
   img {
-  width: 80%; /*responsify logos and other images
-}*/
-}
+  width: 80%; 
+  }
 
   .header-divider {
     display: none;
   }
 
-  /* Hero Area */
+    /* Hero Area */
 
-.hero-area .content-wrapper h1 {
-  font-size: 4em;
-}
+  .hero-area {
+    background: url(../img/unplugged-retreat-hero.jpg);
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
+  }
 
+  .hero-area .content-wrapper h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    min-height: 100px;
+  }
 
  /* Aside */
 
@@ -656,11 +671,31 @@ footer .social i {
    About Page
    ========================================================================== */
 
-.mission .mission-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 20px 0 0;
-}
+  .mission .mission-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 0;
+  }
+
+
+  .map figure {
+    width: 100%;
+    height: 0;
+    position: relative; /*this in order to set iframe to absolute*/
+    padding-bottom: 85%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+    height: 0; /*because the padding-bottom provides the height needed*/
+    overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+    border: none;
+  }
+
+  .map iframe {
+    position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+    top: 0; /*flush with top*/
+    left: 0; /*flush with left*/
+    width: 100%; /*want the map to fill in within the parent div*/
+    height: 100%; /*want the map to fill in within the parent div*/
+  }
+
 
 /*==========================================================================
    FAQ Page
@@ -681,13 +716,11 @@ footer .social i {
 
  .contact-section .content-wrapper {
   justify-content: space-between;
- }
-
-
+  }
 }
-
-/**************** DESKTOP STYLES *************************
-*******************************************************
+/*
+*************** DESKTOP STYLES *************************
+********************************************************/
 
 @media only screen and (min-width: 1200px) {  
 
@@ -695,7 +728,7 @@ footer .social i {
     max-width: 960px;
   }
 
- /* Header */
+  /*Header */
 
   header {
     padding: 33px 0;
@@ -706,76 +739,107 @@ footer .social i {
   }
 
   img {
-/*  width: 75%; responsify logos and other images
-}*/
-}
-
-  /* Hero */
-
-  .hero-area .content-wrapper {
-    height: 600px;
-    /*padding: 40px 0 0 0;*/
+    width: 75%; /*responsify logos and other images*/
   }
+
+
+ /*  Hero */
+
 
   .hero-area h1 {
     width: 90%;
     font-size: 4.5em;
     margin-bottom: 40px;
-    /*padding: 0 10px 0 0;*/
   }
 
-  /*Aside */ 
- aside .content-wrapper {
-  justify-content: space-around;
- }
-
- aside .content-wrapper .form-description,
- aside .content-wrapper .form {
-  /*width: 30%;*/
-  width: 100%;
- }
-
- /*Features*/
-  .features h2 {
-    width: 90%;
-    text-align: left;
+  .hero-area {
+    background: url(../img/unplugged-retreat-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
   }
 
-  .features .features-item-description {
-    width: 65%;
+  .hero-area .content-wrapper h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    min-height: 100px;
   }
 
-  .features article {
-    flex-basis: 33%;
+   /* Aside */ 
+   aside .content-wrapper {
+    justify-content: space-around;
+   }
+
+   aside .content-wrapper .form-description,
+   aside .content-wrapper .form {
+    width: 100%;
+   }
+
+   /*Features*/
+    .features h2 {
+      width: 90%;
+      text-align: left;
+    }
+
+    .features .features-item-description {
+      width: 65%;
+    }
+
+    .features article {
+      flex-basis: 33%;
+    }
+
+  /*  Reviews*/
+    .reviews article div {
+      width: 42%;
+      width: 90%;
+    }
+
+    .reviews h2 {
+      padding: 0 0 20px 0;
+    }
+
+   /*==========================================================================
+     About Page
+     ========================================================================== */
+
+   .mission h2,
+   .contact-section .content-wrapper h2 {
+     width: 100%;
+   }
+
+  .map figure {
+    width: 100%;    
+    position: relative; /*this in order to set iframe to absolute*/
+    padding-bottom: 75%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+    height: 0; /*because the padding-bottom provides the height needed*/
+    overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+    border: none;
   }
 
-  /*Reviews*/
-  .reviews article div {
-    /*width: 42%;*/
-    width: 90%;
+  .map iframe {
+    position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+    top: 0; /*flush with top*/
+    left: 0; /*flush with left*/
+    width: 100%; /*want the map to fill in within the parent div*/
+    height: 100%; /*want the map to fill in within the parent div*/
   }
 
-  .reviews h2 {
-    padding: 0 0 20px 0;
-  }
-
-/* ==========================================================================
-   About Page
-   ========================================================================== */
-
- .mission h2,
- .contact-section .content-wrapper h2 {
-   width: 100%;
- }
-
-/* ==========================================================================
-   FAQ
-   ========================================================================== */
- .faq h1 {
-  font-size: 3em;
- }
-
-
+   /*==========================================================================
+     FAQ
+     ========================================================================== */
+   .faq h1 {
+    font-size: 3em;
+   }
 }
   
 
@@ -783,7 +847,7 @@ footer .social i {
   
 
 
-/* ==========================================================================
+ /*==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
@@ -795,7 +859,7 @@ footer .social i {
   *::after {
     background: #fff !important;
     color: #000 !important;
-    /* Black prints faster */
+     /*Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -815,8 +879,8 @@ footer .social i {
 
   /*
    * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+   * or use the `javascript:` pseudo protocol*/
+   
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -832,7 +896,8 @@ footer .social i {
     page-break-inside: avoid;
   }
 
-  /*
+  
+   /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
