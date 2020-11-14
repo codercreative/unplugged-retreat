@@ -710,6 +710,11 @@ footer .social i {
     flex-basis: 45%;
   }
 
+ .faq h1 {
+  font-size: 3em;
+  text-align: left;
+ }
+
   .faq h2 {
    width: 100%;
   }
@@ -745,19 +750,12 @@ footer .social i {
 
  /*  Hero */
 
-
-  .hero-area h1 {
-    width: 90%;
-    font-size: 4.5em;
-    margin-bottom: 40px;
-  }
-
   .hero-area {
     background: url(../img/unplugged-retreat-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 500px;
+    min-height: 800px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -765,7 +763,8 @@ footer .social i {
   }
 
   .hero-area .content-wrapper h1 {
-    font-size: 2.25em;
+    width: 90%;
+    font-size: 4em;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.2;
@@ -839,6 +838,7 @@ footer .social i {
      ========================================================================== */
    .faq h1 {
     font-size: 3em;
+    text-align: left;
    }
 }
   
