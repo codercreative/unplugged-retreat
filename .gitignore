@@ -4,3 +4,11 @@
 node_modules
 dist
 .cache
+
+.DS_Store
+Thumbs.db
+.eslintrc.json
+package-lock.json
+package.json
+
+authentication.js
