@@ -390,25 +390,22 @@
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    margin: 50px 0 0 0;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     width: 87%;
-    margin-bottom: 10px;
   }
   
-  .faq h1 {
-    margin-top: 10px;
+  .faq .title {
+    padding: 0;
     text-align: left;
   }
   
   .faq h2 {
-    margin-bottom: 40px;
     margin-bottom: 12px;
     font-size: 1.3em;
   }
   
   .faq-content {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .faq-content p {
@@ -630,6 +627,10 @@
       justify-content: space-between;
       margin: 0 20px 0 0;
     }
+
+    .mission-content p {
+      width: 90%;
+    }
     .map figure {
       width: 100%;
       height: 0;
@@ -655,7 +656,6 @@
       justify-content: space-between;
       align-items: center;
       flex-flow: row wrap;
-      margin: 30px 0 50px 0;
     }
   
     .faq-content {
@@ -676,6 +676,10 @@
   
     .contact-section .content-wrapper {
       justify-content: space-between;
+    }
+
+    .faq footer {
+      background-color: #E2E3ED;
     }
 
   
@@ -801,7 +805,13 @@
     .mission h2,
     .contact-section .content-wrapper h2 {
       width: 100%;
+      font-size: 2.3em;
     }
+
+    .mission-content p {
+      font-size: 1.3em;
+    }
+
     .map figure {
       width: 100%;
       position: relative; /*this in order to set iframe to absolute*/
@@ -834,14 +844,12 @@
       justify-content: space-between;
       align-items: center;
       flex-flow: row wrap;
-      /* margin: 20px 0 0 0;
-      margin-bottom: 10px; */
     }
   
     .faq .title {
       width: 100%;
       padding-bottom: 0;
-      margin-bottom: 0;
+      margin-bottom: 30px;
     }
   
     .faq h1 {
@@ -851,8 +859,8 @@
       margin-bottom: 0;
     }
   
-    .content-wrapper {
-      padding-top: 0;
+    .faq .content-wrapper {
+      padding-bottom: 120px;
       margin-top: 0;
     }
   
