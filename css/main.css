@@ -102,12 +102,10 @@
   h1 {
     font-size: 2em;
   }
-  h2 {
-    font-size: 1.6em;
-  }
-  h3 {
+  h2, h3 {
     font-size: 1.4em;
   }
+ 
   h4 {
     font-size: 1.2em;
   }
@@ -123,7 +121,7 @@
   }
   .content-wrapper {
     width: 90%;
-    padding: 1em 0;
+    padding: 1em 0 2em 0;
   }
   /*-----Base Header - Footer Styles-----*/
   header,
@@ -224,7 +222,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -550,7 +548,7 @@
     /* Tablet Aside */
     aside .content-wrapper {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-flow: row wrap;
       width: 700px;
       padding: 0;
@@ -569,13 +567,13 @@
       flex-basis: 50%; /*Adding flex-basis: */
     }
     .features h2 {
-      font-size: 2em;
+      font-size: 1.6em;
     }
     .features .features-item-description {
       width: 75%;
     }
     .features-items p i {
-      font-size: 4em;
+      font-size: 3.2em;
     }
     /* Tablet Home Page - Reviews */
     .reviews .content-wrapper {
@@ -609,6 +607,7 @@
   
     .social i:last-child {
       margin-right: 10px;
+    }
     .social .social-icons p {
       margin: 0 20px 0 0;
     }
@@ -711,15 +710,12 @@
       flex-flow: row wrap;
       margin: 0;
     }
+
     .hero-area .content-wrapper h1 {
-      width: 90%;
       font-size: 5em;
-      font-family: "Poppins", Helvetica, Arial, sans-serif;
-      font-weight: 500;
-      line-height: 1.2;
-      padding: 0;
+      padding-top: 1em;
       margin: 0;
-      min-height: 100px;
+      
     }
     /* Desktop Aside */
     aside .content-wrapper {
