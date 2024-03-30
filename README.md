@@ -8,7 +8,7 @@ Unplugged is a fully responsive multipage website for a made up retreat center. 
 
 ### Challenges
 
-- It took some getting used to working with the HTML5 Boilerplate
+- I had to get used to working with the HTML5 Boilerplate
 - In future, I might want to split out the CSS for the individual pages to make it easier to navigate
 
 ### Resources:
