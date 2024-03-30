@@ -1,0 +1,939 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  /*
+   * A better looking default horizontal rule
+   */
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  /*
+   * Remove default fieldset styles.
+   */
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  textarea {
+    resize: vertical;
+  }
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  /*General Global Styles*/
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #e2e3ed;
+    text-align: left;
+    width: 100%;
+    font-size: 1em;
+  }
+  ul,
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #e2e3ed;
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2, h3 {
+    font-size: 1.4em;
+  }
+ 
+  h4 {
+    font-size: 1.2em;
+  }
+  img {
+    width: 100%; /*responsify logos and other images
+  }*/
+  }
+  figure {
+    margin: 0; /*responsify logos and other images*/
+  }
+  address {
+    font-style: normal;
+  }
+  .content-wrapper {
+    width: 90%;
+    padding: 1em 0 2em 0;
+  }
+  /*-----Base Header - Footer Styles-----*/
+  header,
+  footer {
+    background-color: #202322;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  header {
+    padding: 15px 0;
+  }
+  header .content-wrapper {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  
+  header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .header-divider {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0 5px 0;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    text-transform: uppercase;
+    width: 60%;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  header nav ul li {
+    font-size: 1.125em;
+  }
+  
+  footer {
+    text-align: center;
+    flex-direction: column;
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  footer .content-wrapper {
+    width: 55%;
+    margin: 20px 0;
+  }
+  footer .contact {
+    margin-bottom: 50px;
+  }
+  footer .social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .social-icons p {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    margin: 0 auto;
+  }
+  footer .social-icons p i {
+    background-color: #527158;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  footer .social-icons p i:hover {
+    opacity: 0.7;
+  }
+  footer .copyright {
+    display: flex;
+    font-size: 1em;
+    justify-content: center;
+    padding-bottom: 1em;
+  }
+  /* -------------------- Mobile Styles - Homepage -------------------- */
+  /* Hero Area */
+  .hero-area {
+    background-image: url(../img/unplugged-retreat-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0;
+  }
+  .hero-area .content-wrapper h1 {
+    /* font-size: 1.8em; */
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 14px;
+  }
+  /* Aside - Mobile Styles  */
+  aside {
+    background-color: #527158;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .content-wrapper .form-description p {
+    padding-bottom: 1em;
+  }
+  input[type="text"] {
+    box-sizing: border-box; /*research...*/
+    height: 45px;
+    width: 100%;
+    color: #868e96;
+    font-style: italic;
+    padding: 1em;
+  }
+  input[type="button"] {
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0 0 0;
+    background-color: #2a423a;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  /* Features - Mobile Styles */
+  .features {
+    background: url(../img/unplugged-retreat-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .features article {
+    width: 63%;
+    margin: 30px 0;
+  }
+  .features .features-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .features p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .features .features-items {
+    display: flex;
+    justify-content:space-around;
+    flex-flow: row-wrap;
+  }
+  .features i {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+  }
+  /* Reviews  - Mobile Styles*/
+  .reviews {
+    background-color: #2a423a;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .reviews h2 {
+    margin-bottom: 40px;
+  }
+  .reviews h3 {
+    width: 90%;
+    margin: 20px 0;
+  }
+  .reviews img {
+    width: 100%;
+  }
+  /* Footer  - Mobile Styles*/
+  .social-icons {
+    margin-bottom: 1em;
+  }
+  .social-icons p i {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    margin: 0 20px 0 0;
+    margin: 0 auto;
+  }
+  
+  .social-icon:last-child {
+    margin-right: 0;
+  }
+  /* ==========================================================================
+     About Page - Mobile Styles
+     ========================================================================== */
+  .mission {
+    background-color: #527158;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .map figure {
+    width: 100%;
+    height: 0;
+    position: relative; /*this in order to set iframe to absolute*/
+    padding-bottom: 125%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+    height: 0; /*because the padding-bottom provides the height needed*/
+    overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+    border: none;
+  }
+  .map iframe {
+    position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+    top: 0; /*flush with top*/
+    left: 0; /*flush with left*/
+    width: 100%; /*want the map to fill in within the parent div*/
+    height: 100%; /*want the map to fill in within the parent div*/
+  }
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .contact-content p {
+    margin: 0;
+  }
+  /* ==========================================================================
+     FAQ Page - Mobile Styles
+     ========================================================================== */
+  .faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: #527158;
+  }
+  .faq .content-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: 10px 0 0 0;
+    width: 87%;
+  }
+  
+  .faq .title {
+    padding: 0;
+    text-align: left;
+  }
+  
+  .faq h2 {
+    margin-bottom: 12px;
+    font-size: 1.3em;
+  }
+  
+  .faq-content {
+    margin-bottom: 20px;
+  }
+
+  .faq-content p {
+    margin: 0 0 24px 0;
+  }
+  
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  /*
+   * Hide visually and from screen readers
+   */
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  /*
+   * Extends the .sr-only class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  .invisible {
+    visibility: hidden;
+  }
+  /*
+   * Clearfix: contain floats
+   *
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    `contenteditable` attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that receive the `clearfix` class.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  .clearfix::before,
+  .clearfix::after {
+    content: " ";
+    display: table;
+  }
+  .clearfix::after {
+    clear: both;
+  }
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  /**************** TABLET STYLES *************************
+  ********************************************************/
+  @media only screen and (min-width: 768px) {
+    /* Tablet styles */
+    .content-wrapper {
+      max-width: 640px;
+      margin: 20px 0;
+    }
+
+    header {
+      justify-content: space-around;
+      padding: 33px 0;
+    }
+
+    header .content-wrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    header figure {
+      width: 30%;
+    }
+
+    header nav {
+      width: 20%;
+    }
+  
+    header nav ul {
+      justify-content: space-between;
+    }
+  
+    header figure img {
+      width: 100%;
+    }
+    .header-divider {
+      display: none;
+    }
+    /* Tablet Hero Area */
+    .hero-area {
+      background: url(../img/unplugged-retreat-hero.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 450px;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      margin: 0;
+    }
+    .hero-area .content-wrapper h1 {
+      font-size: 2.5em;
+      font-family: "Poppins", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      line-height: 1.2;
+      width: 70%;
+    }
+    /* Tablet Aside */
+    aside .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      width: 700px;
+      padding: 0;
+    }
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {
+      width: 40%;
+      margin: 0;
+    }
+    /* Tablet Home Page - Features */
+    .features article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 50%; /*Adding flex-basis: */
+    }
+    .features h2 {
+      font-size: 1.6em;
+    }
+    .features .features-item-description {
+      width: 75%;
+    }
+    .features-items p i {
+      font-size: 3.2em;
+    }
+    /* Tablet Home Page - Reviews */
+    .reviews .content-wrapper {
+      margin: 10px;
+    }
+    .reviews article {
+      display: flex;
+      justify-content: space-between;
+    }
+    .reviews figure {
+      width: 50%;
+    }
+    .reviews article .reviews-content {
+      width: 49%;
+      margin: 0 15px;
+    }
+    .reviews h3 {
+      width: 75%;
+      margin: 0;
+      /* font-size: 1.3em; */
+    }
+    /* Tablet Home Page - Footer */
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .social {
+      padding-bottom: 25px;
+    }
+  
+    .social i:last-child {
+      margin-right: 10px;
+    }
+    .social .social-icons p {
+      margin: 0 20px 0 0;
+    }
+  
+    .social .social-icons p:last-of-type {
+      margin-right: 0;
+    }
+  
+    .copyright p {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 1em;
+    }
+    /* ==========================================================================
+     About Page -- Tablet
+     ========================================================================== */
+    .mission .mission-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 20px 0 0;
+    }
+
+    .mission-content p {
+      width: 90%;
+    }
+    .map figure {
+      width: 100%;
+      height: 0;
+      position: relative; /*this in order to set iframe to absolute*/
+      padding-bottom: 85%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+      height: 0; /*because the padding-bottom provides the height needed*/
+      overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+      border: none;
+    }
+    .map iframe {
+      position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+      top: 0; /*flush with top*/
+      left: 0; /*flush with left*/
+      width: 100%; /*want the map to fill in within the parent div*/
+      height: 100%; /*want the map to fill in within the parent div*/
+    }
+    /*==========================================================================
+     FAQ Page -- Tablet
+     ========================================================================== */
+  
+    .faq .content-wrapper {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+  
+    .faq-content {
+      flex-basis: 40%;
+    }
+  
+    .faq h1 {
+      font-size: 3em;
+      text-align: left;
+      font-size: 2em;
+      margin-top: 1em;
+    }
+  
+    .faq h2 {
+      font-size: 1.2em;
+      width: 100%;
+    }
+  
+    .contact-section .content-wrapper {
+      justify-content: space-between;
+    }
+
+    .faq footer {
+      background-color: #E2E3ED;
+    }
+
+  
+  
+  /*
+  *************** DESKTOP STYLES *************************
+  ********************************************************/
+  @media only screen and (min-width: 1200px) {
+    .content-wrapper {
+      max-width: 1000px;
+    }
+    /*Header */
+    header {
+      padding: 33px 0;
+    }
+    nav ul li a {
+      font-size: 1.3em;
+    }
+    img {
+      width: 70%;
+      /* responsify logos and other images */
+    }
+    /*  Desktop Hero */
+    .hero-area {
+      background: url(../img/unplugged-retreat-hero.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 1100px;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      margin: 0;
+    }
+
+    .hero-area .content-wrapper h1 {
+      font-size: 5em;
+      padding-top: 1em;
+      margin: 0;
+      
+    }
+    /* Desktop Aside */
+    aside .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      width: 100%;
+      padding: 0;
+    }
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {
+      width: 50%;
+    }
+    aside .content-wrapper .form-description h3,
+    aside .content-wrapper .form h3 {
+      font-size: 1.8em;
+      margin-bottom: 24px;
+      width: 85%;
+    }
+    aside .content-wrapper p {
+      font-size: 1.5em;
+      width: 85%;
+      margin-top: 0;
+    }
+    input[type="button"] {
+      font-size: 1.5em;
+    }
+    /*Desktop Features*/
+    .features h2 {
+      width: 90%;
+      text-align: left;
+      font-size: 2.2em;
+    }
+    .features .features-item-description {
+      width: 65%;
+      font-size: 1.1em;
+    }
+    .features article {
+      flex-basis: 33%;
+    }
+    .fontawesome-icon i {
+      font-size: 4em;
+    }
+    /*  Desktop Reviews*/
+    .reviews {
+      padding-bottom: 50px;
+    }
+    .reviews article div {
+      width: 42%;
+      width: 90%;
+    }
+    .reviews h2 {
+      padding: 0 0 30px 0;
+      font-size: 35px;
+    }
+    .reviews h3 {
+      font-size: 1.8em;
+      margin-left: 12px;
+    }
+    .reviews-content p {
+      margin-left: 12px;
+      font-size: 1.2em;
+    }
+  
+    /*  Desktop Footer */
+  
+  
+    .contact h4,
+    .social h4 {
+      font-size: 2em;
+    }
+    .contact p {
+      font-size: 1.2em;
+    }
+  
+    .copyright p {
+      font-size: 1em;
+      padding: 1.5em 0;
+    }
+    /*==========================================================================
+       About Page -- Desktop
+       ========================================================================== */
+    .mission h2,
+    .contact-section .content-wrapper h2 {
+      width: 100%;
+      font-size: 2.3em;
+    }
+
+    .mission-content p {
+      font-size: 1.3em;
+    }
+
+    .map figure {
+      width: 100%;
+      position: relative; /*this in order to set iframe to absolute*/
+      padding-bottom: 75%; /*keep map's aspect ratio in order to make responsive and divide height by width. For square set to 100%*/
+      height: 0; /*because the padding-bottom provides the height needed*/
+      overflow: hidden; /*determines whether child element can exceed parent element's width and height*/
+      border: none;
+    }
+    .map iframe {
+      position: absolute; /*makes the map appear even though the height is set to 0. This is a quirky work-around*/
+      top: 0; /*flush with top*/
+      left: 0; /*flush with left*/
+      width: 100%; /*want the map to fill in within the parent div*/
+      height: 100%; /*want the map to fill in within the parent div*/
+    }
+    /*==========================================================================
+       FAQ - Desktop
+       ========================================================================== */
+  
+    .faq {
+      display: flex;
+      justify-content: center;
+      align-items: space-between;
+      flex-flow: row wrap;
+      background-color: #527158;
+    }
+  
+    .faq .content-wrapper {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+  
+    .faq .title {
+      width: 100%;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+  
+    .faq h1 {
+      font-size: 3em;
+      text-align: left;
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+  
+    .faq .content-wrapper {
+      padding-bottom: 120px;
+      margin-top: 0;
+    }
+  
+    .faq h2 {
+      font-size: 1.3em;
+      padding-top: 0;
+      margin-top: 0;
+    }
+  
+    .faq p {
+      font-size: 1.1em;
+    }
+  }
+  
+  /*==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /*Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol*/
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+      display: table-header-group;
+    }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
